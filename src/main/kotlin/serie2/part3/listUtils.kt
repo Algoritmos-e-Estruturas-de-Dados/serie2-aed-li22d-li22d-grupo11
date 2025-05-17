@@ -122,7 +122,7 @@ fun <T> listaCircularComSentinela(values: List<T>): Node<T> {
 }
 
 // Imprime os elementos de uma lista circular com sentinela
-fun <T> printCircularWithSentinel(sentinel: Node<T>) {
+fun <T> printListaCircularComSentinela(sentinel: Node<T>) {
     var current = sentinel.next
     while (current != sentinel) {
         print("${current!!.value} ")
@@ -163,7 +163,7 @@ fun main() {
     splitEvensAndOdds(circularList)
 
     println("Lista após aplicar splitEvensAndOdds:")
-    printCircularWithSentinel(circularList)
+    printListaCircularComSentinela(circularList)
 
     println("\n=== Teste: intersection ===")
 
@@ -179,7 +179,7 @@ fun main() {
     val circularList2 = listaCircularComSentinela(list2)
 
     // Aplica a função de interseção
-    val intersectionList = intersection(circularList1, circularList2, Comparator.naturalOrder())
+    val intersectionList = intersection(circularList1, circularList2, Comparator { a,b -> a - b})
 
     println("Resultado da interseção:")
     printLinearList(intersectionList)
