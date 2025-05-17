@@ -183,4 +183,5 @@ fun main() {
 
     println("Resultado da interseção:")
     printLinearList(intersectionList)
+
 }
