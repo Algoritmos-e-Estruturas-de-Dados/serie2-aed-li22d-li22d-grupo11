@@ -185,4 +185,3 @@ fun main() {
     printLinearList(intersectionList)
 
 }
-
